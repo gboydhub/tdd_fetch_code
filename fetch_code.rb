@@ -3,5 +3,5 @@ def fetch_code(code)
     '404' => 'Page not found',
     '500' => 'Internal server error'
   }
-  code_table[code]
+  code_table[code] or code_table['500']
 end
