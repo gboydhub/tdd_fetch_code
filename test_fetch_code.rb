@@ -17,4 +17,8 @@ class TestFetchCode < Minitest::Test
   def test_fetch_returns_code_500
     assert_equal('Internal server error', fetch_code('500'))
   end
+
+  def test_fetch_invalid_data
+    assert_equal('Internal server error', fetch_code('adskoasd'))
+  end
 end
