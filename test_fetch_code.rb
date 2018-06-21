@@ -9,4 +9,8 @@ class TestFetchCode < Minitest::Test
   def test_assert_returns_string
     assert_equal(String, fetch_code('').class)
   end
+
+  def test_fetch_returns_code
+    assert_equal('Page not found', fetch_code('404'))
+  end
 end
