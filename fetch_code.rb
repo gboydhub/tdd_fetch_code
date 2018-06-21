@@ -1,3 +1,7 @@
 def fetch_code(code)
-  'Page not found'
+  code_table = {
+    '404' => 'Page not found',
+    '500' => 'Internal server error'
+  }
+  code_table[code]
 end

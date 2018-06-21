@@ -7,7 +7,7 @@ class TestFetchCode < Minitest::Test
   end
 
   def test_assert_returns_string
-    assert_equal(String, fetch_code('').class)
+    assert_equal(String, fetch_code('404').class)
   end
 
   def test_fetch_returns_code
