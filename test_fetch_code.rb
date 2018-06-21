@@ -13,4 +13,8 @@ class TestFetchCode < Minitest::Test
   def test_fetch_returns_code
     assert_equal('Page not found', fetch_code('404'))
   end
+
+  def test_fetch_returns_code_500
+    assert_equal('Internal server error', fetch_code('500'))
+  end
 end
